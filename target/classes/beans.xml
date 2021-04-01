@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        告诉spring创建对象，声明bean，就是告诉spring要创建某个类的对象
+        id：对象的自定义名称，唯一值，spring通过这个名称找到对象
+        class：类的全限定名称，不能是接口
+
+        spring就相当于完成了：SomeService someService = new SomeServiceImpl();
+        然后将创建好的对象保存到map中
+        springMap.put(id,对象);
+    -->
+
+    <bean id="someService1" class="com.bjpowernode.services.servicesImpl.ServiceImpl"/>
+    <bean id="someService2" class="com.bjpowernode.services.servicesImpl.ServiceImpl"/>
+    <bean id="date" class="java.util.Date"/>
+</beans>
